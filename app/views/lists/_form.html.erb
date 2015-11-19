@@ -1,0 +1,14 @@
+<%= simple_form_for(@list) do |f| %>
+
+<%= f.error_notification %>
+
+<%= f.input :name, placeholder: "What's it called?" %>
+<%= f.input :price, placeholder: "Prices should be in US dollars." %>
+<%= f.input :category, placeholder:"what kind of item is it?" %>
+<%= f.input :color, placeholder: "Probably Mint" %>
+<%= f.input :size, hint: "Size can be small, large, or N/S (no size)" %>
+<%= f.input :priority, collection: 1..5, as: :radio_buttons %>
+<%= f.button :submit %>
+
+<% end %>
+
